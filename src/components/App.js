@@ -14,6 +14,7 @@ import Movies from "./Movies";
  */
 const App = () => {
   const [search, setSearch] = useState("");
+  const [results, setResults] = useState([])
 
   /**
    * Event handler for clicking search
@@ -23,7 +24,7 @@ const App = () => {
     e.preventDefault(); // no refresh
 
     const searchResults = await searchAny(search);
-    console.log(searchResults);
+    await setResults(searchResults.Search)
   };
 
   return (
@@ -31,7 +32,7 @@ const App = () => {
       <header>Debounce Movies</header>
       <main>
         <Search value={search} setValue={setSearch} onSearch={handleSearch} />
-        <Movies search={search} />
+        <Movies searchResults={results} />
       </main>
     </div>
   );
