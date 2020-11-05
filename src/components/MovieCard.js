@@ -11,16 +11,15 @@ import React from 'react'
 */
 
 /**
- * 
+ * Movie Card component
  * @param {{movie}} props with movie object containing movie data  
  */
-export const MovieCard = ({ movie }) => {
-    return (
-        <div className="movieCard">
-            <h4>{movie.Title}</h4>
-            <img aria-label={movie.Title} src={movie.Poster} /> 
-        </div>
-    )
-}
+export const MovieCard = ({ movie }) => (
+    <div className="movieCard">
+        <h4>{movie.Title}</h4>
+        <img alt={movie.Title} src={movie.Poster} /> 
+    </div>
+)
+
 
 export default MovieCard 
