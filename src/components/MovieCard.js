@@ -10,17 +10,17 @@ import React from 'react'
     }
 */
 
+/**
+ * 
+ * @param {{movie}} props with movie object containing movie data  
+ */
 export const MovieCard = ({ movie }) => {
-    const { Title, Poster } = movie 
-
     return (
         <div className="movieCard">
-            <h4>{Title}</h4>
-            <img aria-label={Title} src={Poster} /> 
+            <h4>{movie.Title}</h4>
+            <img aria-label={movie.Title} src={movie.Poster} /> 
         </div>
     )
-
-
 }
 
-export default MovieCard() 
+export default MovieCard 
