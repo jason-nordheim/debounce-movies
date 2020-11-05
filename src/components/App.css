@@ -89,3 +89,23 @@ main div.search > button {
 main div.search > button:hover {
   color: white;
 }
+div.movies { 
+  display: grid;
+  width: 100vw;
+  grid-template-columns: repeat(5, 18vw);
+  margin: 5vw;
+}
+
+.movieCard {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 20% 80%;
+}
+.movieCard > h4 {
+  grid-row: 1;
+  text-align: center;
+}
+.movieCard > img {
+  grid-row: 2;
+  max-width: 15vw;
+}
