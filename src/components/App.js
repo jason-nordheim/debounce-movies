@@ -1,10 +1,19 @@
-import React from 'react' 
+// imports 
+import React, { useState } from 'react' 
+
+// styles 
+import './App.css'
+
+// components 
+import Search from './Search'
 
 const App = ()  => {
+  const [search, setSearch] = useState('')
   
   return (
-    <div className="App">
+    <div className="app">
       <header>Debounce Movies</header>
+      <Search value={search} setValue={setSearch}/> 
     </div>
   );
 }

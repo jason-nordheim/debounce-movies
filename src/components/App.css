@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+
+}
+
+
+.app {
+    /* match the viewport */
+    height: 100vh;
+    width: 100vw;
+
+    /* align items in a grid */
+    display: grid; 
+    grid-template-columns: 100%;
+    grid-template-rows: 15vh 85vh;
+}
+header {
+    /* position */
+    grid-row: 1;
+
+    /* use flex box to fill the available area and center the text */
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+    font-size: 10vh;
+    
+    border-radius: 10vh;
+    border-bottom: 2px solid black;
+}
+
+div.search {
+    grid-row: 2;
+
+    display: flex;
+    place-content: center;
+    border: none; 
+    width: 100%;
+}
+div.search > input {
+    width: 50vw; 
+    margin: auto; 
+}
