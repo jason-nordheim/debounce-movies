@@ -1,13 +1,9 @@
-import React from 'react' 
+import React from "react";
 
 /**
- * Movies Container 
- * @param {{string, function}} props  
+ * Movies Container
+ * @param {{string, function}} props
  */
-export const Movies = ({search}) => (
-    <div className="movies">
-        {search}
-    </div>
-)
+export const Movies = ({ search }) => <div className="movies">{search}</div>;
 
-export default Movies  
+export default Movies;

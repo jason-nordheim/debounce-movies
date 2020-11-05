@@ -1,19 +1,19 @@
-import React from 'react' 
+import React from "react";
 
 /**
- * Search bar 
- * @param {{string, function}} props  
+ * Search bar
+ * @param {{string, function, function}} props
  */
-export const Search = ({value, setValue, onSearch}) => (
-    <div className="search">
-        <input 
-            type="text" 
-            placeholder="Movie name..." 
-            value={value} 
-            onChange={(e) => setValue(e.currentTarget.value)}
-        /> 
-        <button onClick={onSearch}>Search</button>
-    </div>
-)
+export const Search = ({ value, setValue, onSearch }) => (
+  <div className="search">
+    <input
+      type="text"
+      placeholder="Movie name..."
+      value={value}
+      onChange={(e) => setValue(e.currentTarget.value)}
+    />
+    <button onClick={onSearch}>Search</button>
+  </div>
+);
 
-export default Search 
+export default Search;
