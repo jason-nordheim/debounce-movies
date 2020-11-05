@@ -3,7 +3,7 @@ import Axios from "axios";
 import { OmdbApiKey } from "./config"; // register at www.omdbapi.com to get your key
 
 // local variables
-const baseUrl = `http://www.omdbapi.com/`;
+const baseUrl = `https://www.omdbapi.com/`;
 
 // Search params | 0 = default
 const type_options = ["movie", "series", "episodes"];
