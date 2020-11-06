@@ -25,6 +25,7 @@ header {
 
   /* use flex box to fill the available area and center the text */
   display: flex;
+  max-height: 100%;
   width: 100%;
   justify-content: center;
   margin: auto;
@@ -89,23 +90,44 @@ main div.search > button {
 main div.search > button:hover {
   color: white;
 }
-div.movies { 
+div.results {
   display: grid;
   width: 100vw;
-  grid-template-columns: repeat(5, 18vw);
+  grid-template-columns: repeat(4, 18vw);
+  grid-gap: 7vw;
   margin: 5vw;
 }
 
 .movieCard {
   display: grid;
+  background-color: darkgrey;
   grid-template-columns: 100%;
-  grid-template-rows: 20% 80%;
+  grid-template-rows: 25% 75%;
+
+  height: 100%;
+  width: 100%;
+  border: 1px solid grey;
+  border-radius: 4px;
+  margin: auto;
 }
 .movieCard > h4 {
+  background-color: inherit;
+  color: black;
   grid-row: 1;
+  margin: auto;
   text-align: center;
 }
 .movieCard > img {
   grid-row: 2;
-  max-width: 15vw;
+  max-height: 90%;
+  max-width: 90%;
+  margin: auto;
+}
+.movieCard > img[src="#"] {
+  background-color: gray;
+}
+
+.yearFilter {
+  display: flex;
+  justify-content: center;
 }
