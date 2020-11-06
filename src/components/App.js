@@ -29,7 +29,7 @@ const App = () => {
 
   return (
     <div className="app">
-      <header>Debounce Movies</header>
+      <header>🎥 Movie Finder 🍿</header>
       <main>
         <Search value={search} setValue={setSearch} onSearch={handleSearch} />
         <Movies searchResults={results} />
