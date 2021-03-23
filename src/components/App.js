@@ -14,17 +14,17 @@ import Movies from "./Movies";
  */
 const App = () => {
   const [search, setSearch] = useState("");
-  const [results, setResults] = useState([])
+  const [results, setResults] = useState([]);
 
   /**
    * Event handler for clicking search
    * @param {event} e
    */
   const handleSearch = async (e) => {
-    e.preventDefault(); // no refresh
+    e.preventDefault(); // no refresh (by default page will refresh)
 
     const searchResults = await searchAny(search);
-    await setResults(searchResults.Search)
+    await setResults(searchResults.Search);
   };
 
   return (
