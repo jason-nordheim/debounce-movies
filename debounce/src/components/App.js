@@ -31,7 +31,7 @@ const App = () => {
     <div className="app">
       <header>🎥 Movie Finder 🍿</header>
       <main>
-        <Search value={search} setValue={setSearch} onSearch={handleSearch} />
+        <Search value={search} setValue={setSearch} />
         <Movies searchResults={results} />
       </main>
     </div>
