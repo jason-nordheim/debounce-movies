@@ -39,7 +39,7 @@ main {
   grid-template-columns: 100%;
   grid-template-rows: 15% 85%;
 }
-main div.search {
+main form.search {
   /* location in main */
   grid-column: 1;
   grid-row: 1;
@@ -52,14 +52,14 @@ main div.search {
   border: none;
   width: 100%;
 }
-main div.search > input,
-main div.search > button {
+main form.search > input,
+main form.search > button {
   font-size: large;
   height: 2rem;
   border-radius: 5px;
   margin: auto;
 }
-main div.search > input {
+main form.search > input {
   /* position in search component */
   grid-row: 1;
   grid-column: 2;
@@ -70,13 +70,13 @@ main div.search > input {
   width: 50vw;
   padding: 0 1rem;
 }
-main div.search > input::placeholder {
+main form.search > input::placeholder {
   color: black;
 }
-main div.search > input::placeholder:hover {
+main form.search > input::placeholder:hover {
   color: white;
 }
-main div.search > button {
+main form.search > button {
   /* position in search component */
   grid-row: 1;
   grid-column: 3;
@@ -87,7 +87,7 @@ main div.search > button {
   background-color: gray;
   color: black;
 }
-main div.search > button:hover {
+main form.search > button:hover {
   color: white;
 }
 div.results {

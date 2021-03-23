@@ -5,7 +5,7 @@ import React from "react";
  * @param {{string, function, function}} props
  */
 export const Search = ({ value, setValue, onSearch }) => (
-  <div className="search">
+  <form className="search" onSubmit={onSearch}>
     <input
       type="text"
       placeholder="Movie name..."
@@ -13,7 +13,7 @@ export const Search = ({ value, setValue, onSearch }) => (
       onChange={(e) => setValue(e.currentTarget.value)}
     />
     <button onClick={onSearch}>Search</button>
-  </div>
+  </form>
 );
 
 export default Search;
