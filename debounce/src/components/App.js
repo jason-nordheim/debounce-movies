@@ -8,6 +8,7 @@ import "./App.css";
 // components
 import Search from "./Search";
 import Movies from "./Movies";
+import { useDebounceEffect } from "../hooks/useDebounceEffect";
 
 /**
  * Root Application component
@@ -16,16 +17,16 @@ const App = () => {
   const [search, setSearch] = useState("");
   const [results, setResults] = useState([]);
 
-  /**
-   * Event handler for clicking search
-   * @param {event} e
-   */
-  const handleSearch = async (e) => {
-    e.preventDefault(); // no refresh (by default page will refresh)
-
-    const searchResults = await searchAny(search);
-    await setResults(searchResults.Search);
-  };
+    /**
+     * 
+     */
+  useDebounceEffect(() => {
+    if (search) {
+      searchAny(search).then((searchResults) => {
+        setResults(searchResults.Search);
+      });
+    }
+  }, [search]);
 
   return (
     <div className="app">
